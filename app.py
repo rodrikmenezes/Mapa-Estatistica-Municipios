@@ -3,13 +3,14 @@
 import streamlit as st
 import pandas as pd
 import folium 
+import openpyxl
 from streamlit_folium import folium_static
 
 
 # importar dados
-dados_municipios = pd.read_excel("dados-dos-municipios.xlsx")
-cod_estados = pd.read_excel("codigo-estados.xlsx")
-coordenadas = pd.read_excel("coordenadas-dos-estados.xlsx")
+dados_municipios = pd.read_excel("dados-dos-municipios.xlsx", engine="openpyxl")
+cod_estados = pd.read_excel("codigo-estados.xlsx", engine="openpyxl")
+coordenadas = pd.read_excel("coordenadas-dos-estados.xlsx", engine="openpyxl")
 
 
 # config
